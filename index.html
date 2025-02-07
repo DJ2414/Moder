@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#28a745">
+    <title>Aplicación de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" placeholder="Ingrese cantidad" required>
+        <div class="product-buttons">
+            <button onclick="seleccionarProducto('Puerco', 500)">Puerco (500/lb)</button>
+            <button onclick="seleccionarProducto('Chicharrón', 500)">Chicharrón (500/lb)</button>
+            <button onclick="seleccionarProducto('Agua', 25)">Agua (25/ud)</button>
+            <button onclick="seleccionarProducto('Refresco', 40)">Refresco (40/ud)</button>
+            <button onclick="seleccionarProducto('Casabe', 100)">Casabe (100/ud)</button>
+        </div>
+        <button onclick="anadirProducto()">Añadir</button>
+    </div>
+
+    <table id="tablaResultados">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="total">
+        Total General ($): <span id="totalGeneral">0</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
